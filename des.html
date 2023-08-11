@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destination Website</title>
+  <style>
+    /* CSS for the body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    /* CSS for the heading */
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    /* CSS for the destination list */
+    .destination-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .destination-list-item {
+      margin-bottom: 10px;
+    }
+    
+    .destination-list-item a {
+      display: block;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+    
+    .destination-list-item a:hover {
+      background-color: #ddd;
+    }
+    
+    /* CSS for the destination information */
+    #destination-info {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    
+    #destination-info h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    #destination-info p {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to our Destination Website!</h1>
+  
+  <h2>Choose your next adventure:</h2>
+  
+  <ul class="destination-list">
+    <li class="destination-list-item"><a href="#" onclick="showDestination('destination1')">Destination 1</a></li>
+    <li class="destination-list-item"><a href="#" onclick="showDestination('destination2')">Destination 2</a></li>
+    <li class="destination-list-item"><a href="#" onclick="showDestination('destination3')">Destination 3</a></li>
+    <li class="destination-list-item"><a href="#" onclick="showDestination('destination4')">Destination 4</a></li>
+  </ul>
+  
+  <div id="destination-info"></div>
+
+  <script>
+    // JavaScript function to display the selected destination
+    function showDestination(destination) {
+      var destinationInfo = document.getElementById('destination-info');
+      
+      // Clear any previous destination information
+      destinationInfo.innerHTML = '';
+      
+      // Add the selected destination information
+      if (destination === 'destination1') {
+        destinationInfo.innerHTML = '<h3>Destination 1</h3><p>Description of Destination 1</p>';
+      } else if (destination === 'destination2') {
+        destinationInfo.innerHTML = '<h3>Destination 2</h3><p>Description of Destination 2</p>';
+      } else if (destination === 'destination3') {
+        destinationInfo.innerHTML = '<h3>Destination 3</h3><p>Description of Destination 3</p>';
+      } else if (destination === 'destination4') {
+        destinationInfo.innerHTML = '<h3>Destination 4</h3><p>Description of Destination 4</p>';
+      }
+    }
+  </script>
+</body>
+</html>
+
